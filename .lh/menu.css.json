@@ -1,0 +1,26 @@
+{
+    "sourceFile": "menu.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1686075946686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686076237852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     left: 0 !important;\n   }\n   .menu__btn {\n     position: fixed;\n-    top: 20px;\n+    top: 200px;\n     left: 20px;\n     width: 26px;\n     height: 26px;\n     cursor: pointer;\n"
+                },
+                {
+                    "date": 1686076419544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     left: 0 !important;\n   }\n   .menu__btn {\n     position: fixed;\n-    top: 200px;\n+    top: 20px;\n     left: 20px;\n     width: 26px;\n     height: 26px;\n     cursor: pointer;\n@@ -45,9 +45,9 @@\n   .menu__box {\n     display: block;\n     position: fixed;\n     top: 0;\n-    left: -100%;\n+    left: -50%;\n     width: 300px;\n     height: 100%;\n     margin: 0;\n     padding: 80px 0;\n"
+                }
+            ],
+            "date": 1686075946686,
+            "name": "Commit-0",
+            "content": "#menu__toggle {\n    opacity: 0;\n  }\n  #menu__toggle:checked + .menu__btn > span {\n    transform: rotate(45deg);\n  }\n  #menu__toggle:checked + .menu__btn > span::before {\n    top: 0;\n    transform: rotate(0deg);\n  }\n  #menu__toggle:checked + .menu__btn > span::after {\n    top: 0;\n    transform: rotate(90deg);\n  }\n  #menu__toggle:checked ~ .menu__box {\n    left: 0 !important;\n  }\n  .menu__btn {\n    position: fixed;\n    top: 20px;\n    left: 20px;\n    width: 26px;\n    height: 26px;\n    cursor: pointer;\n    z-index: 1;\n  }\n  .menu__btn > span,\n  .menu__btn > span::before,\n  .menu__btn > span::after {\n    display: block;\n    position: absolute;\n    width: 100%;\n    height: 2px;\n    background-color: #616161;\n    transition-duration: .25s;\n  }\n  .menu__btn > span::before {\n    content: '';\n    top: -8px;\n  }\n  .menu__btn > span::after {\n    content: '';\n    top: 8px;\n  }\n  .menu__box {\n    display: block;\n    position: fixed;\n    top: 0;\n    left: -100%;\n    width: 300px;\n    height: 100%;\n    margin: 0;\n    padding: 80px 0;\n    list-style: none;\n    background-color: #ECEFF1;\n    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);\n    transition-duration: .25s;\n  }\n  .menu__item {\n    display: block;\n    padding: 12px 24px;\n    color: #333;\n    font-family: 'Roboto', sans-serif;\n    font-size: 20px;\n    font-weight: 600;\n    text-decoration: none;\n    transition-duration: .25s;\n  }\n  .menu__item:hover {\n    background-color: #CFD8DC;\n  }"
+        }
+    ]
+}
