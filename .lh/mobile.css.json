@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 309,
+            "activePatchIndex": 403,
             "patches": [
                 {
                     "date": 1686068997081,
@@ -1244,6 +1244,382 @@
                 {
                     "date": 1686162946601,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -146,9 +146,9 @@\n }\n \n .game-card article {\n     display: grid;\n-    grid-template-columns: 1fr auto;\n+    grid-template-columns: auto 1fr;\n }\n \n .game-content {\n    padding-left: 20px;\n"
+                },
+                {
+                    "date": 1686163284699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,8 +126,9 @@\n \n .news-card article p {\n     padding-bottom: 1.5rem;\n     border-bottom: 1px solid #5E607A;\n+    color: #5E607A;\n }\n \n /* Game Card */\n \n"
+                },
+                {
+                    "date": 1686163299529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n \n .news-card article p {\n     padding-bottom: 1.5rem;\n     border-bottom: 1px solid #5E607A;\n-    color: #5E607A;\n+    color: #C5C6CE;\n }\n \n /* Game Card */\n \n"
+                },
+                {
+                    "date": 1686163421790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,8 +136,9 @@\n     display: grid;\n     grid-template-rows: 1fr 1fr 1fr;\n     margin: 100px 30px 0 30px;\n     justify-content: center;\n+    padding-bottom: 20px;\n     align-items: center;\n     gap:30px\n }\n \n"
+                },
+                {
+                    "date": 1686163435702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,9 +136,9 @@\n     display: grid;\n     grid-template-rows: 1fr 1fr 1fr;\n     margin: 100px 30px 0 30px;\n     justify-content: center;\n-    padding-bottom: 20px;\n+    padding-bottom: 100px;\n     align-items: center;\n     gap:30px\n }\n \n"
+                },
+                {
+                    "date": 1686163658310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     top: 0;\n     right: 0;\n     height: 100vh;\n     width: 40vh;\n-    background-color: red;\n+    background-color: #FFFDFA\n }\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n"
+                },
+                {
+                    "date": 1686163675768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,12 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n+.menu-box::before {\n+    content: '';\n+}\n+\n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n     padding-top: 20px;\n     margin-left: 80%;\n"
+                },
+                {
+                    "date": 1686163685264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n }\n \n .menu-box::before {\n     content: '';\n+    background-color: #5E607A;\n }\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n"
+                },
+                {
+                    "date": 1686163734322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,10 +45,16 @@\n     background-color: #FFFDFA\n }\n \n .menu-box::before {\n-    content: '';\n-    background-color: #5E607A;\n+    content: \"\";\n+    position: absolute;\n+    top: 0;\n+    left: 0;\n+    width: 100%;\n+    height: 100%;\n+    background-color: rgba(18, 23, 37, 0.6);\n+    z-index: -1;\n }\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n"
+                },
+                {
+                    "date": 1686163756454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-.menu-box::before {\n+body::before {\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n"
+                },
+                {
+                    "date": 1686163797769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,18 +44,18 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-body::before {\n-    content: \"\";\n-    position: absolute;\n-    top: 0;\n-    left: 0;\n-    width: 100%;\n-    height: 100%;\n-    background-color: rgba(18, 23, 37, 0.6);\n-    z-index: -1;\n-}\n+/* .menu-box::before {\n+      content: \"\";\n+        position: absolute;\n+        top: 0;\n+        left: 0;\n+        width: 100%;\n+        height: 100%;\n+        background-color: rgba(18, 23, 37, 0.6);\n+        z-index: -1;\n+} */\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n     padding-top: 20px;\n"
+                },
+                {
+                    "date": 1686163808487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,18 +44,18 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-/* .menu-box::before {\n+.menu-box::before {\n       content: \"\";\n         position: absolute;\n         top: 0;\n         left: 0;\n         width: 100%;\n         height: 100%;\n         background-color: rgba(18, 23, 37, 0.6);\n         z-index: -1;\n-} */\n+}\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n     padding-top: 20px;\n"
+                },
+                {
+                    "date": 1686163822693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,16 +45,16 @@\n     background-color: #FFFDFA\n }\n \n .menu-box::before {\n-      content: \"\";\n-        position: absolute;\n-        top: 0;\n-        left: 0;\n-        width: 100%;\n-        height: 100%;\n-        background-color: rgba(18, 23, 37, 0.6);\n-        z-index: -1;\n+    content: \"\";\n+    position: absolute;\n+    top: 0;\n+    left: 0;\n+    width: 100%;\n+    height: 100%;\n+    background-color: rgba(18, 23, 37, 0.6);\n+    z-index: -1;\n }\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n"
+                },
+                {
+                    "date": 1686163842008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-.menu-box::before {\n+body::before {\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n"
+                },
+                {
+                    "date": 1686163853263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,18 +44,18 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-body::before {\n+/* .menu-box::before {\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n     width: 100%;\n     height: 100%;\n     background-color: rgba(18, 23, 37, 0.6);\n     z-index: -1;\n-}\n+} */\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n     padding-top: 20px;\n"
+                },
+                {
+                    "date": 1686163886551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,18 +44,18 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-/* .menu-box::before {\n+.body::before {\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n     width: 100%;\n     height: 100%;\n     background-color: rgba(18, 23, 37, 0.6);\n     z-index: -1;\n-} */\n+}\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n     padding-top: 20px;\n"
+                },
+                {
+                    "date": 1686163892971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-.body::before {\n+.body::before, .body::after {\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n"
+                },
+                {
+                    "date": 1686163910397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-.body::before, .body::after {\n+body::before {\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n"
+                },
+                {
+                    "date": 1686163924194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-body::before {\n+.{\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n"
+                },
+                {
+                    "date": 1686164842635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,13 @@\n .hamburger-menu {\n     margin: 20px;\n }\n \n+.toggle-dark {\n+    \n+}\n \n+\n .menu-box {\n     position: absolute;\n     margin: 0;\n     top: 0;\n"
+                },
+                {
+                    "date": 1686164962386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n     margin: 20px;\n }\n \n .toggle-dark {\n-    \n+    background-color:darlpr;\n }\n \n \n .menu-box {\n"
+                },
+                {
+                    "date": 1686164983491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n     margin: 20px;\n }\n \n .toggle-dark {\n-    background-color:darlpr;\n+    background-color:dark-primary;\n }\n \n \n .menu-box {\n"
+                },
+                {
+                    "date": 1686164992941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n+:root {\n+    --dark-primary: #00001A; \n+}\n main {\n     display: grid;\n     grid-template-rows: auto auto auto auto;\n }\n"
+                },
+                {
+                    "date": 1686165000941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     margin: 20px;\n }\n \n .toggle-dark {\n-    background-color:dark-primary;\n+    background-color:var(--dark-primary);\n }\n \n \n .menu-box {\n"
+                },
+                {
+                    "date": 1686165022341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n :root {\n     --dark-primary: #00001A; \n+    --almost-white:#FFFDFA\n }\n main {\n     display: grid;\n     grid-template-rows: auto auto auto auto;\n"
+                },
+                {
+                    "date": 1686165036651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n :root {\n     --dark-primary: #00001A; \n-    --almost-white:#FFFDFA\n+    --almost-white:#FFFDFA;\n }\n main {\n     display: grid;\n     grid-template-rows: auto auto auto auto;\n@@ -52,18 +52,8 @@\n     width: 40vh;\n     background-color: #FFFDFA\n }\n \n-.{\n-    content: \"\";\n-    position: absolute;\n-    top: 0;\n-    left: 0;\n-    width: 100%;\n-    height: 100%;\n-    background-color: rgba(18, 23, 37, 0.6);\n-    z-index: -1;\n-}\n \n .toggle-icon {\n     content: url(\"assets/images/icon-menu-close.svg\");\n     padding-top: 20px;\n"
+                },
+                {
+                    "date": 1686165065404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n :root {\n     --dark-primary: #00001A; \n     --almost-white:#FFFDFA;\n+    --primary-color:#F15D51;\n }\n main {\n     display: grid;\n     grid-template-rows: auto auto auto auto;\n@@ -49,9 +50,9 @@\n     top: 0;\n     right: 0;\n     height: 100vh;\n     width: 40vh;\n-    background-color: #FFFDFA\n+    background-color: var(--almost-white)\n }\n \n \n .toggle-icon {\n"
+                },
+                {
+                    "date": 1686165083122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n \n .primary-btn {\n     text-decoration: none;\n     text-transform: uppercase;\n-    background-color: #F15D51;\n+    background-color: var(--primary-color);\n     color: #FFFDFA;\n     width: 185px;\n     height: 48px;\n     font-weight: 700;\n"
+                },
+                {
+                    "date": 1686165089430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n .primary-btn {\n     text-decoration: none;\n     text-transform: uppercase;\n     background-color: var(--primary-color);\n-    color: #FFFDFA;\n+    color: var(--almost-white)\n     width: 185px;\n     height: 48px;\n     font-weight: 700;\n     font-size: 14px;\n"
+                },
+                {
+                    "date": 1686165183214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n .primary-btn {\n     text-decoration: none;\n     text-transform: uppercase;\n     background-color: var(--primary-color);\n-    color: var(--almost-white)\n+    color: var(--almost-white);\n     width: 185px;\n     height: 48px;\n     font-weight: 700;\n     font-size: 14px;\n"
+                },
+                {
+                    "date": 1686165208881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n :root {\n     --dark-primary: #00001A; \n+    --dark-secondary:#5E607A\n     --almost-white:#FFFDFA;\n     --primary-color:#F15D51;\n }\n main {\n"
+                },
+                {
+                    "date": 1686165236886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n :root {\n     --dark-primary: #00001A; \n-    --dark-secondary:#5E607A\n+    --dark-secondary:#5E607A;\n     --almost-white:#FFFDFA;\n     --primary-color:#F15D51;\n }\n main {\n@@ -43,9 +43,8 @@\n .toggle-dark {\n     background-color:var(--dark-primary);\n }\n \n-\n .menu-box {\n     position: absolute;\n     margin: 0;\n     top: 0;\n"
+                },
+                {
+                    "date": 1686165246597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     margin: 20px;\n }\n \n .toggle-dark {\n-    background-color:var(--dark-primary);\n+    background-color:var(--dark-secondary;\n }\n \n .menu-box {\n     position: absolute;\n"
+                },
+                {
+                    "date": 1686165297601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     margin: 20px;\n }\n \n .toggle-dark {\n-    background-color:var(--dark-secondary;\n+    background-color:var(#000);\n }\n \n .menu-box {\n     position: absolute;\n"
+                },
+                {
+                    "date": 1686165304949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     margin: 20px;\n }\n \n .toggle-dark {\n-    background-color:var(#000);\n+    background-color:#000\n }\n \n .menu-box {\n     position: absolute;\n"
+                },
+                {
+                    "date": 1686165343419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     margin: 20px;\n }\n \n .toggle-dark {\n-    background-color:#000\n+    background-color: rgba(18, 23, 37, 0.6);\n }\n \n .menu-box {\n     position: absolute;\n"
+                },
+                {
+                    "date": 1686165376530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n }\n \n .toggle-dark {\n     background-color: rgba(18, 23, 37, 0.6);\n+    z-index: 1;\n }\n \n .menu-box {\n     position: absolute;\n"
+                },
+                {
+                    "date": 1686165381670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,8 @@\n }\n \n .toggle-dark {\n     background-color: rgba(18, 23, 37, 0.6);\n-    z-index: 1;\n }\n \n .menu-box {\n     position: absolute;\n"
+                },
+                {
+                    "date": 1686165398994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n+    background-color: rgba(18, 23, 37, 0.6);\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165409950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    background-color: rgba(18, 23, 37, 0.6);\n+    opacity: 0.25;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165422859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    opacity: 0.25;\n+    opacity: 0.6;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165428468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,8 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    opacity: 0.6;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165469228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,12 @@\n .background-image {\n     width: 343px;\n }\n \n+.background-image::before {\n+    background-color: rgba(18, 23, 37, 0.6);\n+}\n+\n .showcase-card {\n     display: grid;\n     grid-template-rows: repeat(1fr 1fr 1fr 1fr);\n     align-content: center;\n"
+                },
+                {
+                    "date": 1686165482738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,16 @@\n     width: 343px;\n }\n \n .background-image::before {\n+    content: \"\";\n+    position: absolute;\n+    top: 0;\n+    left: 0;\n+    width: 100%;\n+    height: 100%;\n     background-color: rgba(18, 23, 37, 0.6);\n+    z-index: -1;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165494234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n .background-image {\n     width: 343px;\n }\n \n-.background-image::before {\n+.background-image::before, .background-image::after {\n     content: \"\";\n     position: absolute;\n     top: 0;\n     left: 0;\n"
+                },
+                {
+                    "date": 1686165510167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,19 +72,8 @@\n .background-image {\n     width: 343px;\n }\n \n-.background-image::before, .background-image::after {\n-    content: \"\";\n-    position: absolute;\n-    top: 0;\n-    left: 0;\n-    width: 100%;\n-    height: 100%;\n-    background-color: rgba(18, 23, 37, 0.6);\n-    z-index: -1;\n-}\n-\n .showcase-card {\n     display: grid;\n     grid-template-rows: repeat(1fr 1fr 1fr 1fr);\n     align-content: center;\n"
+                },
+                {
+                    "date": 1686165635773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,10 @@\n \n /* Showcase Card */\n \n .background-image {\n+    position: absolute;\n+    z-index: -1;\n     width: 343px;\n }\n \n .showcase-card {\n"
+                },
+                {
+                    "date": 1686165642265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,10 +69,8 @@\n \n /* Showcase Card */\n \n .background-image {\n-    position: absolute;\n-    z-index: -1;\n     width: 343px;\n }\n \n .showcase-card {\n"
+                },
+                {
+                    "date": 1686165657749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n+    opacity: 0.9;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165673911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    opacity: 0.9;\n+    opacity: 0.25;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165687787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,8 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    opacity: 0.25;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165774637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n+    background-color: transparent;\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165783008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    background-color: transparent;\n+    background-color: black\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165945592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    background-color: black\n+    background-image: url('assets/images/image-web-3-mobile.jpg');\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165962078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    background-image: url('assets/images/image-web-3-mobile.jpg');\n+    background-image: url('assets/images/image-web-3-mobile.jpg'),#0001a0\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686165972880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,8 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    background-image: url('assets/images/image-web-3-mobile.jpg'),#0001a0\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686166027198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n+    filter: brightness(50%);\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686166041341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,10 @@\n     top: 0;\n     right: 0;\n     height: 100vh;\n     width: 40vh;\n-    background-color: var(--almost-white)\n+    background-color: var(--almost-white); \n+    z-index: 1;\n }\n \n \n .toggle-icon {\n"
+                },
+                {
+                    "date": 1686166052272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,8 @@\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n-    filter: brightness(50%);\n }\n \n .showcase-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686166081743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,13 @@\n     display: block;\n     padding: 20px;\n }\n \n+.toggle-background-brightness {\n+    filter: brightness(50%);\n+}\n \n+\n /* Showcase Card */\n \n .background-image {\n     width: 343px;\n"
+                },
+                {
+                    "date": 1686166507622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,12 @@\n .menu-items li {\n     padding: 20px;\n }\n \n+.menu-items li a {\n+    text-decoration: none;\n+}\n+\n .hamburger-menu {\n     margin: 20px;\n }\n \n"
+                },
+                {
+                    "date": 1686166515150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n }\n \n .menu-items li a {\n     text-decoration: none;\n+    color: #00001A;\n }\n \n .hamburger-menu {\n     margin: 20px;\n"
+                },
+                {
+                    "date": 1686166549374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,8 @@\n .menu-items li {\n     padding: 20px;\n }\n \n-.menu-items li a {\n-    text-decoration: none;\n-    color: #00001A;\n-}\n \n .hamburger-menu {\n     margin: 20px;\n }\n"
+                },
+                {
+                    "date": 1686166765804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n }\n \n \n /* Menu and Nav */\n-\n+.icon-menu {\n+    display: block;\n+}\n .menu-items {\n     list-style-type: none;\n     display: none;\n     font-size: 1.125rem;\n"
+                },
+                {
+                    "date": 1686167687748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,15 @@\n     padding: 20px;\n }\n \n \n+.menu-items li a {\n+    text-decoration: none;\n+    color: #00001A;\n+    \n+}\n+\n+\n .hamburger-menu {\n     margin: 20px;\n }\n \n"
+                },
+                {
+                    "date": 1686169091421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,8 +123,12 @@\n     padding-top: 15px;\n     letter-spacing: 4.38px;\n }\n \n+.showcase {\n+    display: none;\n+}\n+\n .primary-btn:hover {\n     background-color: #00001A;\n }\n \n"
+                },
+                {
+                    "date": 1686169105782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,9 +124,10 @@\n     letter-spacing: 4.38px;\n }\n \n .showcase {\n-    display: none;\n+    display: bla\n+    ;\n }\n \n .primary-btn:hover {\n     background-color: #00001A;\n"
+                },
+                {
+                    "date": 1686169206518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,12 +123,8 @@\n     padding-top: 15px;\n     letter-spacing: 4.38px;\n }\n \n-.showcase {\n-    display: bla\n-    ;\n-}\n \n .primary-btn:hover {\n     background-color: #00001A;\n }\n"
+                },
+                {
+                    "date": 1686169455866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,8 +80,11 @@\n .toggle-background-brightness {\n     filter: brightness(50%);\n }\n \n+.showcase {\n+    display: block;\n+}\n \n /* Showcase Card */\n \n .background-image {\n"
+                },
+                {
+                    "date": 1686169462795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n     filter: brightness(50%);\n }\n \n .showcase {\n-    display: block;\n+    display: none;\n }\n \n /* Showcase Card */\n \n"
+                },
+                {
+                    "date": 1686169484432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n     filter: brightness(50%);\n }\n \n .showcase {\n-    display: none;\n+    display: block;\n }\n \n /* Showcase Card */\n \n"
+                },
+                {
+                    "date": 1686171870757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n     filter: brightness(50%);\n }\n \n .showcase {\n-    display: block;\n+    display: none;\n }\n \n /* Showcase Card */\n \n"
+                },
+                {
+                    "date": 1686171877946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n     filter: brightness(50%);\n }\n \n .showcase {\n-    display: none;\n+    display: block;\n }\n \n /* Showcase Card */\n \n"
+                },
+                {
+                    "date": 1686172517465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,8 +139,9 @@\n     background-color: black;\n     color: #FFFDFA;\n     margin: 100px 30px 0 30px;\n     padding-left: 20px;\n+    padding-top: 2rem;\n }\n \n .news-card h2 {\n     color: #E9AA52;\n"
+                },
+                {
+                    "date": 1686172524125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,8 @@\n     background-color: black;\n     color: #FFFDFA;\n     margin: 100px 30px 0 30px;\n     padding-left: 20px;\n-    padding-top: 2rem;\n }\n \n .news-card h2 {\n     color: #E9AA52;\n"
+                },
+                {
+                    "date": 1686172537659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,9 +122,9 @@\n     height: 48px;\n     font-weight: 700;\n     font-size: 14px;\n     text-align: center;\n-    padding-top: 15px;\n+    padding-top: 2rem;\n     letter-spacing: 4.38px;\n }\n \n \n"
+                },
+                {
+                    "date": 1686172549050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,9 +122,9 @@\n     height: 48px;\n     font-weight: 700;\n     font-size: 14px;\n     text-align: center;\n-    padding-top: 2rem;\n+    padding-top: 1rem;\n     letter-spacing: 4.38px;\n }\n \n \n"
+                },
+                {
+                    "date": 1686172556604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,9 +122,9 @@\n     height: 48px;\n     font-weight: 700;\n     font-size: 14px;\n     text-align: center;\n-    padding-top: 1rem;\n+    padding-top: 2rem;\n     letter-spacing: 4.38px;\n }\n \n \n"
+                },
+                {
+                    "date": 1686172565616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n     text-decoration: none;\n     text-transform: uppercase;\n     background-color: var(--primary-color);\n     color: var(--almost-white);\n-    width: 185px;\n+    width: 100px;\n     height: 48px;\n     font-weight: 700;\n     font-size: 14px;\n     text-align: center;\n"
+                },
+                {
+                    "date": 1686172575992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,10 +117,10 @@\n     text-decoration: none;\n     text-transform: uppercase;\n     background-color: var(--primary-color);\n     color: var(--almost-white);\n-    width: 100px;\n-    height: 48px;\n+    width: 185px;\n+    height: 32px;\n     font-weight: 700;\n     font-size: 14px;\n     text-align: center;\n     padding-top: 2rem;\n"
+                },
+                {
+                    "date": 1686172584094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,9 +122,9 @@\n     height: 32px;\n     font-weight: 700;\n     font-size: 14px;\n     text-align: center;\n-    padding-top: 2rem;\n+    padding-top: 1em;\n     letter-spacing: 4.38px;\n }\n \n \n"
+                },
+                {
+                    "date": 1686172622774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n .primary-btn {\n     margin-top: 20px;\n }\n \n-.primary-btn {\n+/* .primary-btn {\n     text-decoration: none;\n     text-transform: uppercase;\n     background-color: var(--primary-color);\n     color: var(--almost-white);\n@@ -122,16 +122,16 @@\n     height: 32px;\n     font-weight: 700;\n     font-size: 14px;\n     text-align: center;\n-    padding-top: 1em;\n+    padding-top: 1rem;\n     letter-spacing: 4.38px;\n }\n \n \n .primary-btn:hover {\n     background-color: #00001A;\n-}\n+} */\n \n /* News Card */\n .news-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686172672402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n .primary-btn {\n     margin-top: 20px;\n }\n \n-/* .primary-btn {\n+.primary-btn {\n     text-decoration: none;\n     text-transform: uppercase;\n     background-color: var(--primary-color);\n     color: var(--almost-white);\n@@ -129,9 +129,9 @@\n \n \n .primary-btn:hover {\n     background-color: #00001A;\n-} */\n+}\n \n /* News Card */\n .news-card {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686173516992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,9 +187,9 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n-    padding-bottom: 0.5rem;\n+    padding-bottom: 0.25rem;\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173574418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,9 +187,9 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n-    padding-bottom: 0.25rem;\n+    padding-bottom: 0.5rem;\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173597736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,9 +187,8 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n-    padding-bottom: 0.5rem;\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173614668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,8 +187,9 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n+    padding-bottom: 0.5rem;\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173624494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,9 +187,9 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n-    padding-bottom: 0.5rem;\n+    /* padding-bottom: 0.5rem; */\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173644154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,9 +187,9 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n-    /* padding-bottom: 0.5rem; */\n+    padding-bottom: 0.5rem;\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173657176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,9 +187,8 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n-    padding-bottom: 0.5rem;\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173666778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,8 +187,9 @@\n \n .game-content h2 {\n     color: #C5C6CE;\n     font-size: 2rem;\n+    padding: 0.1rem;\n }\n \n .game-content h3 {\n     padding-bottom: 1rem;\n"
+                },
+                {
+                    "date": 1686173677401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,9 +191,9 @@\n     padding: 0.1rem;\n }\n \n .game-content h3 {\n-    padding-bottom: 1rem;\n+    padding-bottom: 0.25rem;\n }\n \n \n \n"
+                },
+                {
+                    "date": 1686173722006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,9 +171,9 @@\n     gap:30px\n }\n \n .game-card img {\n-    width: 100px;\n+    width: 100%;\n     height: 129px;\n }\n \n .game-card article {\n"
+                },
+                {
+                    "date": 1686173733693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,10 +171,9 @@\n     gap:30px\n }\n \n .game-card img {\n-    width: 100%;\n-    height: 129px;\n+    width: 100px;\n }\n \n .game-card article {\n     display: grid;\n"
+                },
+                {
+                    "date": 1686173741388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -172,8 +172,9 @@\n }\n \n .game-card img {\n     width: 100px;\n+    height: 100%;\n }\n \n .game-card article {\n     display: grid;\n"
                 }
             ],
             "date": 1686068997081,

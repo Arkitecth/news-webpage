@@ -1,3 +1,9 @@
+:root {
+    --dark-primary: #00001A; 
+    --dark-secondary:#5E607A;
+    --almost-white:#FFFDFA;
+    --primary-color:#F15D51;
+}
 main {
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -19,7 +25,9 @@ main {
 
 
 /* Menu and Nav */
-
+.icon-menu {
+    display: block;
+}
 .menu-items {
     list-style-type: none;
     display: none;
@@ -30,10 +38,21 @@ main {
     padding: 20px;
 }
 
+
+.menu-items li a {
+    text-decoration: none;
+    color: #00001A;
+    
+}
+
+
 .hamburger-menu {
     margin: 20px;
 }
 
+.toggle-dark {
+    background-color: rgba(18, 23, 37, 0.6);
+}
 
 .menu-box {
     position: absolute;
@@ -42,8 +61,10 @@ main {
     right: 0;
     height: 100vh;
     width: 40vh;
-    background-color: red;
+    background-color: var(--almost-white); 
+    z-index: 1;
 }
+
 
 .toggle-icon {
     content: url("assets/images/icon-menu-close.svg");
@@ -56,6 +77,13 @@ main {
     padding: 20px;
 }
 
+.toggle-background-brightness {
+    filter: brightness(50%);
+}
+
+.showcase {
+    display: block;
+}
 
 /* Showcase Card */
 
@@ -88,16 +116,17 @@ main {
 .primary-btn {
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #F15D51;
-    color: #FFFDFA;
+    background-color: var(--primary-color);
+    color: var(--almost-white);
     width: 185px;
-    height: 48px;
+    height: 32px;
     font-weight: 700;
     font-size: 14px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 1rem;
     letter-spacing: 4.38px;
 }
+
 
 .primary-btn:hover {
     background-color: #00001A;
@@ -127,6 +156,7 @@ main {
 .news-card article p {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #5E607A;
+    color: #C5C6CE;
 }
 
 /* Game Card */
@@ -136,13 +166,14 @@ main {
     grid-template-rows: 1fr 1fr 1fr;
     margin: 100px 30px 0 30px;
     justify-content: center;
+    padding-bottom: 100px;
     align-items: center;
     gap:30px
 }
 
 .game-card img {
     width: 100px;
-    height: 129px;
+    height: 100%;
 }
 
 .game-card article {
@@ -157,11 +188,11 @@ main {
 .game-content h2 {
     color: #C5C6CE;
     font-size: 2rem;
-    padding-bottom: 0.5rem;
+    padding: 0.1rem;
 }
 
 .game-content h3 {
-    padding-bottom: 1rem;
+    padding-bottom: 0.25rem;
 }
 
 

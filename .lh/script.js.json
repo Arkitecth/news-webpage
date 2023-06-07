@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 37,
             "patches": [
                 {
                     "date": 1686077003065,
@@ -112,6 +112,50 @@
                 {
                     "date": 1686081120173,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n-hamburger.addEventListener(\"click\", () => {\n+iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n-    menuItems.classList.toggle(\"ttoggle-menu-items\"); \n+    menuItems.classList.toggle(\"toggle-menu-items\"); \n })\n iconMenu.src = \"assets/images/icon-menu.svg\"; \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686164822422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n+const body = document.querySelector(\"body\")\n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n"
+                },
+                {
+                    "date": 1686165108508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n-const body = document.querySelector(\"body\")\n+const body = document.querySelector(\"body\"); \n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n"
+                },
+                {
+                    "date": 1686165120510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,7 @@\n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n+    body.classList.toggle(\"toogle-dark\")\n })\n iconMenu.src = \"assets/images/icon-menu.svg\"; \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686165134996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n-    body.classList.toggle(\"toogle-dark\")\n+    body.classList.toggle(\"toggle-dark\");\n })\n iconMenu.src = \"assets/images/icon-menu.svg\"; \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686166197770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n+const menuItems = document.querySelector(\".background-image\")\n const body = document.querySelector(\"body\"); \n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n"
+                },
+                {
+                    "date": 1686166203121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n-const menuItems = document.querySelector(\".background-image\")\n+const backgroundImage = document.querySelector(\".background-image\")\n const body = document.querySelector(\"body\"); \n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n"
+                },
+                {
+                    "date": 1686166219393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n-const backgroundImage = document.querySelector(\".background-image\")\n+const backgroundImage = document.querySelector(\".background-image\"); \n+\n const body = document.querySelector(\"body\"); \n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n     body.classList.toggle(\"toggle-dark\");\n+    backgroundImage.toggle(\".toggle-background-image\")\n })\n iconMenu.src = \"assets/images/icon-menu.svg\"; \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686166234455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n     body.classList.toggle(\"toggle-dark\");\n-    backgroundImage.toggle(\".toggle-background-image\")\n+    backgroundImage.toggle(\".toggle-background-brightness \");\n })\n iconMenu.src = \"assets/images/icon-menu.svg\"; \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686166247595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n     body.classList.toggle(\"toggle-dark\");\n-    backgroundImage.toggle(\".toggle-background-brightness \");\n+    backgroundImage.toggle(\"toggle-background-brightness\");\n })\n iconMenu.src = \"assets/images/icon-menu.svg\"; \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686166295468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n-const backgroundImage = document.querySelector(\".background-image\"); \n+const backgroundImage = document.querySelector(\"background-image\"); \n \n const body = document.querySelector(\"body\"); \n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n"
+                },
+                {
+                    "date": 1686166364346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n const hamburger = document.querySelector(\".hamburger-menu\"); \n const iconMenu = document.querySelector(\".icon-menu\");\n const menuItems = document.querySelector(\".menu-items\"); \n-const backgroundImage = document.querySelector(\"background-image\"); \n+const backgroundImage = document.querySelector(\".background-image\"); \n \n const body = document.querySelector(\"body\"); \n iconMenu.addEventListener(\"click\", () => {\n     hamburger.classList.toggle(\"menu-box\"); \n     iconMenu.classList.toggle(\"toggle-icon\"); \n     menuItems.classList.toggle(\"toggle-menu-items\"); \n     body.classList.toggle(\"toggle-dark\");\n-    backgroundImage.toggle(\"toggle-background-brightness\");\n+    backgroundImage.classList.toggle(\"toggle-background-brightness\");\n })\n iconMenu.src = \"assets/images/icon-menu.svg\"; \n\\ No newline at end of file\n"
                 }
             ],
             "date": 1686077003065,
